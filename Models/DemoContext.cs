@@ -9,6 +9,7 @@ namespace WebDemo.Models
     public class DemoContext : DbContext
     {
         public DbSet<UserModel> Users { get; set;}
-        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite(@"Data Source=C:\SQL-VERİTABANI\QuizWeb.db");
+        public DbSet<QuizModel> Quiz { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite(@"Data Source=C:\Users\selcuk\source\repos\WebDemo\QuizWeb.db");
     }
 }

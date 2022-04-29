@@ -80,5 +80,29 @@ namespace WebDemo.Controllers
 
             return View();
         }
+
+        public IActionResult MainScreen()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult MainScreen(QuizModel quiz)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var db = new DemoContext())
+                {
+
+                    db.Add(quiz);
+                    db.SaveChanges();
+
+                }
+
+            }
+
+
+            return View();
+        }
     }
 }

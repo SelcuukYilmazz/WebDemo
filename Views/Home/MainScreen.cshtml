@@ -1,6 +1,95 @@
-﻿@model WebDemo.Models.UserModel
+﻿@model WebDemo.Models.QuizModel
 @{
     ViewData["Title"] = "MainScreen";
 }
 
 <a>Ana Ekrana Hoş Geldiniz Soru Yaratma Kısmı Aşağıdadır</a>
+
+<form class="container mt-5" action="/home/mainscreen" method="post">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-10">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">
+                            <input type="text" class="form-control" placeholder="Enter question" asp-for="Question1">
+                        </h5>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice1_1">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice1_2">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice1_3">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice1_4">
+                    <select class="selectpicker" asp-for="Answer1">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">
+                            <input type="text" class="form-control" placeholder="Enter question" asp-for="Question2">
+                        </h5>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice2_1">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice2_2">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice2_3">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice2_4">
+                    <select class="selectpicker" asp-for="Answer2">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+            </div>
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">
+                            <input type="text" class="form-control" placeholder="Enter question" asp-for="Question3">
+                        </h5>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice3_1">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice3_2">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice3_3">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice3_4">
+                    <select class="selectpicker" asp-for="Answer3">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+            </div>
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2">
+                            <input type="text" class="form-control" placeholder="Enter question" asp-for="Question4">
+                        </h5>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice4_1">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice4_2">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice4_3">
+                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice4_4">
+                    <select class="selectpicker" asp-for="Answer4">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
