@@ -55,5 +55,30 @@ namespace WebDemo.Controllers
 
             return View();
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login(UserModel user)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var db = new DemoContext())
+                {
+                    var result = db.Users.Where(u => u.Name.Contains(user.Name)).FirstOrDefault();
+                    if(user.Name == result.Name && user.Password == result.Password)
+                    {
+                        return View("MainScreen");
+                    }
+                }
+
+            }
+
+
+            return View();
+        }
     }
 }
