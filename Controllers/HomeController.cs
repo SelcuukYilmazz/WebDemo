@@ -71,6 +71,12 @@ namespace WebDemo.Controllers
                     var result = db.Users.Where(u => u.Name.Contains(user.Name)).FirstOrDefault();
                     if(user.Name == result.Name && user.Password == result.Password)
                     {
+                        List<QuizModel> quizzes = new List<QuizModel>();
+                        quizzes = db.Quiz.ToList();
+
+                        
+                        ViewBag.quizzes = quizzes;
+
                         return View("QuizList");
                     }
                 }
@@ -107,13 +113,54 @@ namespace WebDemo.Controllers
 
         public IActionResult QuizList()
         {
-            return View();
+
+            List<QuizModel> quizzes = new List<QuizModel>();
+            using (var db = new DemoContext())
+            {
+                quizzes = db.Quiz.ToList();
+
+            }
+            ViewBag.quizzes = quizzes;
+
+                return View();
         }
 
         [HttpPost]
         public IActionResult QuizList(QuizModel quiz)
         {
             return View("MainScreen");
+        }
+
+        [HttpPost]
+        public IActionResult DeleteQuiz(QuizModel quiz)
+        {
+            List<QuizModel> quizzes = new List<QuizModel>();
+            using (var db = new DemoContext())
+            {
+
+                var result = db.Quiz.Remove(db.Quiz.Where(u => u.Id == quiz.Id).FirstOrDefault());
+                db.SaveChanges();
+
+                quizzes = db.Quiz.ToList();
+
+            }
+            ViewBag.quizzes = quizzes;
+
+            return View("QuizList");
+        }
+        [HttpPost]
+        public IActionResult SolveQuiz(QuizModel quiz)
+        {
+            List<QuizModel> quizzes = new List<QuizModel>();
+            using (var db = new DemoContext())
+            {
+
+                var result = db.Quiz.Where(u => u.Id == quiz.Id).FirstOrDefault();
+                
+                ViewBag.quiz = result;
+            }
+
+            return View("SolveQuiz");
         }
     }
 }

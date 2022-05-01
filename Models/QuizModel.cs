@@ -74,5 +74,9 @@ namespace WebDemo.Models
 
         [Required(ErrorMessage = " Please Enter Answer4")]
         public String Answer4 { get; set; }
+
+        public String Date { get; set; }
+
+        public bool Completed { get; set; }
     }
 }
