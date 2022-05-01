@@ -71,7 +71,7 @@ namespace WebDemo.Controllers
                     var result = db.Users.Where(u => u.Name.Contains(user.Name)).FirstOrDefault();
                     if(user.Name == result.Name && user.Password == result.Password)
                     {
-                        return View("MainScreen");
+                        return View("QuizList");
                     }
                 }
 
@@ -103,6 +103,17 @@ namespace WebDemo.Controllers
 
 
             return View();
+        }
+
+        public IActionResult QuizList()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult QuizList(QuizModel quiz)
+        {
+            return View("MainScreen");
         }
     }
 }
