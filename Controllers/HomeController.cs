@@ -162,5 +162,18 @@ namespace WebDemo.Controllers
 
             return View("SolveQuiz");
         }
+
+        [HttpPost]
+        public IActionResult CheckQuiz(QuizModel quiz)
+        {
+            List<QuizModel> quizzes = new List<QuizModel>();
+            using (var db = new DemoContext())
+            {
+
+                var result = db.Quiz.Where(u => u.Id == quiz.Id).FirstOrDefault();
+            }
+
+            return View("SolveQuiz");
+        }
     }
 }

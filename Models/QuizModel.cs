@@ -64,16 +64,16 @@ namespace WebDemo.Models
         public String Choice4_4 { get; set; }
 
         [Required(ErrorMessage = " Please Enter Answer1")]
-        public String Answer1 { get; set; }
+        public int Answer1 { get; set; }
 
         [Required(ErrorMessage = " Please Enter Answer2")]
-        public String Answer2 { get; set; }
+        public int Answer2 { get; set; }
 
         [Required(ErrorMessage = " Please Enter Answer3")]
-        public String Answer3 { get; set; }
+        public int Answer3 { get; set; }
 
         [Required(ErrorMessage = " Please Enter Answer4")]
-        public String Answer4 { get; set; }
+        public int Answer4 { get; set; }
 
         public String Date { get; set; }
 
