@@ -3,7 +3,7 @@
     ViewData["Title"] = "SolveQuiz";
 }
 
-<form class="container mt-5" action="/home/CheckQuiz" method="post">
+<form class="container mt-5" action="/home/CheckQuiz" method="post" runat="server">
     <div class="d-flex justify-content-center row">
         <div class="col-md-10 col-lg-10">
             <div class="border">
@@ -15,7 +15,7 @@
                 <h5 class="mt-1 ml-2">
                     @ViewBag.quiz.Text
                 </h5>
-            </div> 
+            </div>
             <div class="border">
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
@@ -26,26 +26,26 @@
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="Q1-1" asp-for="Answer1" value="0">
-                        <label class="form-check-label" for="Q1-1">
+                        <input class="form-check-input" type="radio" id="Q1" asp-for="Answer1" value="0">
+                        <label class="form-check-label" for="Q1">
                             @ViewBag.quiz.Choice1_1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio"  id="Q1-2" asp-for="Answer1" value="1">
-                        <label class="form-check-label" for="Q1-2">
+                        <input class="form-check-input" type="radio" id="Q1" asp-for="Answer1" value="1">
+                        <label class="form-check-label" for="Q1">
                             @ViewBag.quiz.Choice1_2
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio"  id="Q1-3" asp-for="Answer1" value="2">
-                        <label class="form-check-label" for="Q1-3">
+                        <input class="form-check-input" type="radio" id="Q1" asp-for="Answer1" value="2">
+                        <label class="form-check-label" for="Q1">
                             @ViewBag.quiz.Choice1_3
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio"  id="Q1-4" asp-for="Answer1" value="3">
-                        <label class="form-check-label" for="Q1-4">
+                        <input class="form-check-input" type="radio" id="Q1" asp-for="Answer1" value="3">
+                        <label class="form-check-label" for="Q1">
                             @ViewBag.quiz.Choice1_4
                         </label>
                     </div>
@@ -61,26 +61,26 @@
                         </h5>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="Q2-1" asp-for="Answer2" value="0">
-                        <label class="form-check-label" for="Q2-1">
+                        <input class="form-check-input" type="radio" id="Q2" asp-for="Answer2" value="0">
+                        <label class="form-check-label" for="Q2">
                             @ViewBag.quiz.Choice2_1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio"  id="Q2-2" asp-for="Answer2" value="1">
-                        <label class="form-check-label" for="Q2-2">
+                        <input class="form-check-input" type="radio" id="Q2" asp-for="Answer2" value="1">
+                        <label class="form-check-label" for="Q2">
                             @ViewBag.quiz.Choice2_2
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio"  id="Q2-3" asp-for="Answer2" value="2">
-                        <label class="form-check-label" for="Q2-3">
+                        <input class="form-check-input" type="radio" id="Q2" asp-for="Answer2" value="2">
+                        <label class="form-check-label" for="Q2">
                             @ViewBag.quiz.Choice2_3
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio"  id="Q2-4" asp-for="Answer2" value="3">
-                        <label class="form-check-label" for="Q2-4">
+                        <input class="form-check-input" type="radio" id="Q2" asp-for="Answer2" value="3">
+                        <label class="form-check-label" for="Q2">
                             @ViewBag.quiz.Choice2_4
                         </label>
                     </div>
@@ -95,26 +95,26 @@
                         </h5>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="Q3-1" asp-for="Answer3" value="0">
-                        <label class="form-check-label" for="Q3-1">
+                        <input class="form-check-input" type="radio" id="Q3" asp-for="Answer3" value="0">
+                        <label class="form-check-label" for="Q3">
                             @ViewBag.quiz.Choice3_1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio"  id="Q3-2" asp-for="Answer3" value="1">
-                        <label class="form-check-label" for="Q3-2">
+                        <input class="form-check-input" type="radio" id="Q3" asp-for="Answer3" value="1">
+                        <label class="form-check-label" for="Q3">
                             @ViewBag.quiz.Choice3_2
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio"  id="Q3-3" asp-for="Answer3" value="2">
-                        <label class="form-check-label" for="Q3-3">
+                        <input class="form-check-input" type="radio" id="Q3" asp-for="Answer3" value="2">
+                        <label class="form-check-label" for="Q3">
                             @ViewBag.quiz.Choice3_3
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio"  id="Q3-4" asp-for="Answer3" value="3">
-                        <label class="form-check-label" for="Q3-4">
+                        <input class="form-check-input" type="radio" id="Q3" asp-for="Answer3" value="3">
+                        <label class="form-check-label" for="Q3">
                             @ViewBag.quiz.Choice3_4
                         </label>
                     </div>
@@ -129,26 +129,26 @@
                         </h5>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="Q4-1" asp-for="Answer4" value="0">
-                        <label class="form-check-label" for="Q4-1">
+                        <input class="form-check-input" type="radio" id="Q4" asp-for="Answer4" value="0">
+                        <label class="form-check-label" for="Q4">
                             @ViewBag.quiz.Choice4_1
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="Q4-2" asp-for="Answer4" value="1">
-                        <label class="form-check-label" for="Q4-2">
+                        <input class="form-check-input" type="radio" id="Q4" asp-for="Answer4" value="1">
+                        <label class="form-check-label" for="Q4">
                             @ViewBag.quiz.Choice4_2
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="Q4-3" asp-for="Answer4" value="2">
-                        <label class="form-check-label" for="Q4-3">
+                        <input class="form-check-input" type="radio" id="Q4" asp-for="Answer4" value="2">
+                        <label class="form-check-label" for="Q4">
                             @ViewBag.quiz.Choice4_3
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" id="Q4-4" asp-for="Answer4" value="3">
-                        <label class="form-check-label" for="Q4-4">
+                        <input class="form-check-input" type="radio" id="Q4" asp-for="Answer4" value="3">
+                        <label class="form-check-label" for="Q4">
                             @ViewBag.quiz.Choice4_4
                         </label>
                     </div>
@@ -157,10 +157,12 @@
         </div>
     </div>
 
+
+    <input type="hidden" class="form-control" asp-for="Id" value="@ViewBag.quiz.Id">
     <input type="hidden" class="form-control" asp-for="Date" value="@DateTime.Now">
     <input type="hidden" class="form-control" asp-for="Completed" value="@true">
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" id="SubmitQuiz">Submit</button>
 </form>
 
 <div class="container">

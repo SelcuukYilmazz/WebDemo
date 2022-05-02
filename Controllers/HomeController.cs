@@ -164,16 +164,43 @@ namespace WebDemo.Controllers
         }
 
         [HttpPost]
-        public IActionResult CheckQuiz(QuizModel quiz)
+        public IActionResult CheckQuiz(QuizModel userQuiz)
         {
-            List<QuizModel> quizzes = new List<QuizModel>();
+            
+
+            List<ResultModel> results = new List<ResultModel>();
             using (var db = new DemoContext())
             {
+                var realQuiz = db.Quiz.Where(u => u.Id == userQuiz.Id).FirstOrDefault();
+                int grade = 0;
+                if(userQuiz.Answer1 == realQuiz.Answer1)
+                {
+                    grade += 25;
+                }
+                if (userQuiz.Answer2 == realQuiz.Answer2)
+                {
+                    grade += 25;
+                }
+                if (userQuiz.Answer3 == realQuiz.Answer3)
+                {
+                    grade += 25;
+                }
+                if (userQuiz.Answer4 == realQuiz.Answer4)
+                {
+                    grade += 25;
+                }
 
-                var result = db.Quiz.Where(u => u.Id == quiz.Id).FirstOrDefault();
+                ResultModel resultModel = new ResultModel(0,userQuiz.Id,"deneme",grade);
+                db.Add(resultModel);
+                db.SaveChanges();
+                
+
+                results = db.Result.ToList();
+
             }
+            ViewBag.results = results;
 
-            return View("SolveQuiz");
+            return View("Result");
         }
     }
 }

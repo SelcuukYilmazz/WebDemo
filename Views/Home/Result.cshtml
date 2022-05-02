@@ -1,0 +1,47 @@
+﻿@model WebDemo.Models.ResultModel
+@{
+    ViewData["Title"] = "Result";
+}
+
+<h1>QuizList</h1>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="career-search mb-60">
+                <div class="filter-result">
+                    @if (ViewBag.results != null && ViewBag.results.Count > 0)
+                    {
+                        <table class="table table-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Kullanıcı Kimliği</th>
+                                    <th scope="col">Değerlendirme Notu</th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                                @foreach (var result in ViewBag.results)
+                                {
+
+                                <tr>
+                                    <td>@result.Id</td>
+                                    <td>@result.UserId</td>
+                                    <td>@result.Grade</td>
+                                </tr>
+                                }
+                            </tbody>
+
+                        </table>
+                        <div class="job-right my-4 flex-shrink-0">
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
