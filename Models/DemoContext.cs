@@ -11,6 +11,6 @@ namespace WebDemo.Models
         public DbSet<UserModel> Users { get; set;}
         public DbSet<QuizModel> Quiz { get; set; }
         public DbSet<ResultModel> Result { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite(@"Data Source=C:\Users\selcuk\source\repos\WebDemo\QuizWeb.db");
+        protected override void OnConfiguring(DbContextOptionsBuilder options) => options.UseSqlite(@"Data Source=QuizWeb.db");
     }
 }
