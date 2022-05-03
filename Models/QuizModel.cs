@@ -10,6 +10,8 @@ namespace WebDemo.Models
     {
         public int Id { get; set; }
 
+        public int UserId { get; set; }
+
         [Required(ErrorMessage = " Please Enter Title")]
         public String Title { get; set; }
         [Required(ErrorMessage = " Please Enter Text")]

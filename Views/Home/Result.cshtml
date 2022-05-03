@@ -19,6 +19,7 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Kullanıcı Kimliği</th>
+                                    <th scope="col">Kullanıcı Adı</th>
                                     <th scope="col">Değerlendirme Notu</th>
                                 </tr>
                             </thead>
@@ -31,6 +32,7 @@
                                 <tr>
                                     <td>@result.Id</td>
                                     <td>@result.UserId</td>
+                                    <td>@result.Name</td>
                                     <td>@result.Grade</td>
                                 </tr>
                                 }
@@ -44,4 +46,9 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container">
+    <form class="job-box d-md-flex align-items-center justify-content-between mb-30" action="/home/QuizList">
+        <button type="submit" class="btn btn-primary">See All Quizzes</button>
+    </form>
 </div>

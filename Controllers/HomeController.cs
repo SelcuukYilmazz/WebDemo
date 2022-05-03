@@ -172,6 +172,8 @@ namespace WebDemo.Controllers
             using (var db = new DemoContext())
             {
                 var realQuiz = db.Quiz.Where(u => u.Id == userQuiz.Id).FirstOrDefault();
+                var user = db.Users.Where(u => u.Id == userQuiz.UserId).FirstOrDefault();
+                
                 int grade = 0;
                 if(userQuiz.Answer1 == realQuiz.Answer1)
                 {
@@ -190,16 +192,27 @@ namespace WebDemo.Controllers
                     grade += 25;
                 }
 
-                ResultModel resultModel = new ResultModel(0,userQuiz.Id,"deneme",grade);
+                ResultModel resultModel = new ResultModel(user.Id,userQuiz.Id,user.Name,grade);
                 db.Add(resultModel);
                 db.SaveChanges();
                 
-
                 results = db.Result.ToList();
 
             }
             ViewBag.results = results;
 
+            return View("Result");
+        }
+
+        public IActionResult Result()
+        {
+
+            List<ResultModel> results = new List<ResultModel>();
+            using (var db = new DemoContext())
+            {
+                results = db.Result.ToList();
+            }
+            ViewBag.results = results;
             return View("Result");
         }
     }
