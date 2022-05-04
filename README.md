@@ -1,5 +1,5 @@
 # WebDemo
-Bu demoda kendi quizinizi yaratabilir. Kendi kullanıcınızla giriş yapabilirsiniz ve sonucunuzu görebilirsiniz.
+Bu demoda kendi quizinizi yaratabilir. Kendi kullanıcınızla giriş yapabilirsiniz ve sonucunuzu görebilirsiniz. C# ASP.NET kullanılarak SQLite veritabanı üzerinde yazılmıştır.
 
 # Giriş Ekranı
 ![image](https://user-images.githubusercontent.com/56796992/166747878-73021a68-cbb3-409f-90ec-f25d9e673fc8.png)
