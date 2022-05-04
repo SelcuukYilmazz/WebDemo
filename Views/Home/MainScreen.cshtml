@@ -3,29 +3,27 @@
     ViewData["Title"] = "MainScreen";
 }
 
-<a>Ana Ekrana Hoş Geldiniz Soru Yaratma Kısmı Aşağıdadır</a>
-
 <form class="container mt-5" action="/home/mainscreen" method="post">
     <div class="d-flex justify-content-center row">
         <div class="col-md-10 col-lg-10">
             <h1 class="mt-1 ml-2">
-                <input type="text" class="form-control" placeholder="Enter Title" asp-for="Title">
+                <input type="text" class="form-control" placeholder="Başlığı Gir" asp-for="Title">
             </h1>
             <h5 class="mt-1 ml-2">
-                <input type="text" class="form-control" placeholder="Enter Text" asp-for="Text">
+                <input type="text" class="form-control" placeholder="Yazıyı Gir" asp-for="Text">
             </h5>
             <div class="border">
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
-                        <h3 class="text-danger">Q.</h3>
+                        <h3 class="text-danger">Soru.</h3>
                         <h5 class="mt-1 ml-2">
-                            <input type="text" class="form-control" placeholder="Enter question" asp-for="Question1">
+                            <input type="text" class="form-control" placeholder="Soruyu Gir" asp-for="Question1">
                         </h5>
                     </div>
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice1_1">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice1_2">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice1_3">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice1_4">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice1_1">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice1_2">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice1_3">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice1_4">
                     <select class="selectpicker" asp-for="Answer1">
                         <option value="0">A</option>
                         <option value="1">B</option>
@@ -38,15 +36,15 @@
             <div class="border">
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
-                        <h3 class="text-danger">Q.</h3>
+                        <h3 class="text-danger">Soru.</h3>
                         <h5 class="mt-1 ml-2">
-                            <input type="text" class="form-control" placeholder="Enter question" asp-for="Question2">
+                            <input type="text" class="form-control" placeholder="Soruyu Gir" asp-for="Question2">
                         </h5>
                     </div>
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice2_1">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice2_2">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice2_3">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice2_4">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice2_1">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice2_2">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice2_3">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice2_4">
                     <select class="selectpicker" asp-for="Answer2">
                         <option value="0">A</option>
                         <option value="1">B</option>
@@ -58,15 +56,15 @@
             <div class="border">
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
-                        <h3 class="text-danger">Q.</h3>
+                        <h3 class="text-danger">Soru.</h3>
                         <h5 class="mt-1 ml-2">
-                            <input type="text" class="form-control" placeholder="Enter question" asp-for="Question3">
+                            <input type="text" class="form-control" placeholder="Soruyu Gir" asp-for="Question3">
                         </h5>
                     </div>
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice3_1">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice3_2">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice3_3">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice3_4">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice3_1">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice3_2">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice3_3">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice3_4">
                     <select class="selectpicker" asp-for="Answer3">
                         <option value="0">A</option>
                         <option value="1">B</option>
@@ -80,13 +78,13 @@
                     <div class="d-flex flex-row align-items-center question-title">
                         <h3 class="text-danger">Q.</h3>
                         <h5 class="mt-1 ml-2">
-                            <input type="text" class="form-control" placeholder="Enter question" asp-for="Question4">
+                            <input type="text" class="form-control" placeholder="Soruyu Gir" asp-for="Question4">
                         </h5>
                     </div>
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice4_1">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice4_2">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice4_3">
-                    <input type="text" class="form-control" placeholder="Enter Choice" asp-for="Choice4_4">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice4_1">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice4_2">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice4_3">
+                    <input type="text" class="form-control" placeholder="Seçeneği Gir" asp-for="Choice4_4">
                     <select class="selectpicker" asp-for="Answer4">
                         <option value="0">A</option>
                         <option value="1">B</option>
@@ -101,11 +99,11 @@
     <input type="hidden" class="form-control" asp-for="Date" value="@DateTime.Now">
     <input type="hidden" class="form-control" asp-for="Completed" value="@false">
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Formu Gönder</button>
 </form>
 
 <div class="container">
     <form class="job-box d-md-flex align-items-center justify-content-between mb-30" action="/home/QuizList">
-        <button type="submit" class="btn btn-primary">See All Quizzes</button>
+        <button type="submit" class="btn btn-primary">Bütün Quizleri Görüntüle</button>
     </form>
 </div>

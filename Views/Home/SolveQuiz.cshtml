@@ -22,7 +22,7 @@
             <div class="border">
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
-                        <h3 class="text-danger">Q.</h3>
+                        <h3 class="text-danger">Soru.</h3>
                         <h5 class="mt-1 ml-2">
                             @ViewBag.quiz.Question1
                         </h5>
@@ -58,7 +58,7 @@
             <div class="border">
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
-                        <h3 class="text-danger">Q.</h3>
+                        <h3 class="text-danger">Soru.</h3>
                         <h5 class="mt-1 ml-2">
                             @ViewBag.quiz.Question2
                         </h5>
@@ -92,7 +92,7 @@
             <div class="border">
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
-                        <h3 class="text-danger">Q.</h3>
+                        <h3 class="text-danger">Soru.</h3>
                         <h5 class="mt-1 ml-2">
                             @ViewBag.quiz.Question3
                         </h5>
@@ -126,7 +126,7 @@
             <div class="border">
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
-                        <h3 class="text-danger">Q.</h3>
+                        <h3 class="text-danger">Soru.</h3>
                         <h5 class="mt-1 ml-2">
                             @ViewBag.quiz.Question4
                         </h5>
@@ -165,11 +165,11 @@
     <input type="hidden" class="form-control" asp-for="Date" value="@DateTime.Now">
     <input type="hidden" class="form-control" asp-for="Completed" value="@true">
 
-    <button type="submit" class="btn btn-primary" id="SubmitQuiz">Submit</button>
+    <button type="submit" class="btn btn-primary" id="SubmitQuiz">Formu Gönder</button>
 </form>
 
 <div class="container">
     <form class="job-box d-md-flex align-items-center justify-content-between mb-30" action="/home/QuizList">
-        <button type="submit" class="btn btn-primary">See All Quizzes</button>
+        <button type="submit" class="btn btn-primary">Bütün Quizleri Görüntüle</button>
     </form>
 </div>
